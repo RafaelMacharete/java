@@ -35,7 +35,12 @@ public class Book {
         this.isBorrowed = false;
     }
 
+    public String getStatus() {
+        return isBorrowed ? "Emprestado" : "Disponível";
+    }
 
-
+    public String toString() {
+        return "ISBN: " + isbn + ", Título: " + title + ", Autor: " + author + ", Status: " + getStatus();
+    }
 
 }
